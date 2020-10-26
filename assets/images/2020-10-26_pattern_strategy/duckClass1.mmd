@@ -1,0 +1,14 @@
+classDiagram
+    Duck <|-- MallardDuck
+    Duck <|-- ReadheadDuck
+    Duck <|-- RubberDuck
+    class Duck{
+      +display()
+      +swim()
+      +quack()
+      +fly()
+    }
+    class RubberDuck{
+        +display(/*конкретная версия*/) 
+        +fly(/*пустое переопределение*/)
+    } 

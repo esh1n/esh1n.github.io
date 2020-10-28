@@ -118,7 +118,15 @@ toc: true
 
 ## Final Definition of Stratehy Pattern
 
-**Паттерн Стратегия**  определяет семейство алгоритмов,  
+**Паттерн Стратегия**  определяет семейство алгоритмов, инкапсулирует каждый из них и обеспечивает их взаимозаменяемость. Он позволяет модифициовать алгоритмы независимо от их использования на стороне клиента. 
+
+### Bonus : Kingdom people strategies
+
+![](/assets/images/2020-10-26_pattern_strategy/basic_relations.jpeg)
+
+![](/assets/images/2020-10-26_pattern_strategy/kingdom_strategy.jpeg)
+
+
 
 
 

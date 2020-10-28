@@ -124,7 +124,10 @@ toc: true
 
 ![](/assets/images/2020-10-26_pattern_strategy/basic_relations.jpeg)
 
-![](/assets/images/2020-10-26_pattern_strategy/kingdom_strategy.jpeg)
+***
+
+![kingdom strategy](/assets/images/2020-10-26_pattern_strategy/kingdom strategy.jpeg)
+
 
 
 

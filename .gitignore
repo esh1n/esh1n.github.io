@@ -8,3 +8,6 @@ Gemfile.lock
 .DS_Store
 *.swp
 *~
+.DS_Store
+assets/.DS_Store
+assets/images/.DS_Store

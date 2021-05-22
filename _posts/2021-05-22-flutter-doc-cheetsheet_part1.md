@@ -167,6 +167,36 @@ Widget build(BuildContext context) {
   }
 ``` 
 
+### ScrollView
+
+```dart
+  @override
+Widget build(BuildContext context) {
+  return ListView(
+    children: <Widget>[
+      Text('Row One'),
+      Text('Row Two'),
+      Text('Row Three'),
+      Text('Row Four'),
+    ],
+  );
+}
+``` 
+
+```dart
+  @override
+Widget build(BuildContext context) {
+  return CircleAvatar(
+                backgroundImage: new NetworkImage(
+                  'http://thecatapi.com/api/images/get?format=src'
+                    '&size=small&type=jpg#${title.hashCode}'
+                )
+``` 
+
+
+
+
+
 
 
 

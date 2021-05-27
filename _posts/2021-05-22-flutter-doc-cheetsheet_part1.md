@@ -193,6 +193,189 @@ Widget build(BuildContext context) {
                 )
 ``` 
 
+## Gesture Detector
+If the Widget doesn’t support event detection, wrap the widget in a GestureDetector and pass a function to the onTap parameter.
+
+```dart
+class SampleApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: GestureDetector(
+          onTap: () {
+            print('tap');
+          },
+          child: FlutterLogo(
+            size: 200.0,
+          ),
+        ),
+      ),
+    );
+  }
+}
+``` 
+
+ListView with Padding:
+
+```dart
+class _SampleAppPageState extends State<SampleAppPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sample App'),
+      ),
+      body: ListView(children: _getListData()),
+    );
+  }
+
+  List<Widget> _getListData() {
+    List<Widget> widgets = [];
+    for (int i = 0; i < 100; i++) {
+      widgets.add(Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text('Row $i'),
+      ));
+    }
+    return widgets;
+  }
+```
+### ListViewBuilder 
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(SampleApp());
+}
+
+class SampleApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Sample App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: SampleAppPage(),
+    );
+  }
+}
+
+class SampleAppPage extends StatefulWidget {
+  SampleAppPage({Key key}) : super(key: key);
+
+  @override
+  _SampleAppPageState createState() => _SampleAppPageState();
+}
+
+class _SampleAppPageState extends State<SampleAppPage> {
+  List<Widget> widgets = [];
+
+  @override
+  void initState() {
+    super.initState();
+    for (int i = 0; i < 100; i++) {
+      widgets.add(getRow(i));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sample App'),
+      ),
+      body: ListView.builder(
+        itemCount: widgets.length,
+        itemBuilder: (BuildContext context, int position) {
+          return getRow(position);
+        },
+      ),
+    );
+  }
+
+  Widget getRow(int i) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          widgets.add(getRow(widgets.length));
+          print('row $i');
+        });
+      },
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text('Row $i'),
+      ),
+    );
+  }
+}
+
+```   
+
+### TextInput show Validation
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sample App'),
+      ),
+      body: Center(
+        child: TextField(
+          onSubmitted: (String text) {
+            setState(() {
+              if (!isEmail(text)) {
+                _errorText = 'Error: This is not an email';
+              } else {
+                _errorText = null;
+              }
+            });
+          },
+          decoration: InputDecoration(
+            hintText: 'This is a hint',
+            errorText: _getErrorText(),
+          ),
+        ),
+      ),
+    );
+  }
+
+```   
+
+## Navigation
+
+2. Navigate to the second route using Navigator.push()
+
+```dart
+// Within the `FirstRoute` widget
+onPressed: () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SecondRoute()),
+  );
+}
+```  
+
+3. Return to the first route using Navigator.pop()
+
+```dart
+// Within the SecondRoute widget
+onPressed: () {
+  Navigator.pop(context);
+}
+``` 
+
+void goToAuth(context) => Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) => AuthorizationRoute()),
+    );
+  
+    void goToOnboarding(context) => Navigator.of(context)
+    .pushReplacement(MaterialPageRoute(builder: (_) => OnboardingRoute()));
+
+
 
 
 

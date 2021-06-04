@@ -1,3 +1,16 @@
+---
+title: "RxJava2 to Coroutines Migration Guide"
+excerpt: "How to migrate from RxJava To Kotlin Coroutines *Properly*"
+categories:
+  - Android
+  - Kotlin
+tags:
+  - coroutines
+  - rx
+last_modified_at: 2021-06-04T13:05:25-05:00
+toc: true
+---
+
 # RxJava2 to Coroutines Migration Guide
 
 

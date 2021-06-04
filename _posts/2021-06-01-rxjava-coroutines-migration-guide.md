@@ -16,3 +16,10 @@ dependencies {
 
 
 ![flow in viewmodel](flow_in_viewmodel.png "Nice VAldai")
+
+
+### Useful links regarding MVI
+
+- [Revisiting unidirectional data flows on Android with Kotlin’s SharedFlow and StateFlow](https://argenkiwi.medium.com/revisiting-unidirectional-data-flows-on-android-with-kotlins-sharedflow-and-stateflow-92fb74e17983)
+- [android-mvi-kotlin-coroutines-flow](https://quickbirdstudios.com/blog/android-mvi-kotlin-coroutines-flow/)
+- [mvi-architecture-with-kotlin-flows-and-channels](https://proandroiddev.com/mvi-architecture-with-kotlin-flows-and-channels-d36820b2028d)

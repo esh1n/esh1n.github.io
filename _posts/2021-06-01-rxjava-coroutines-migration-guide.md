@@ -11,8 +11,6 @@ last_modified_at: 2021-06-04T13:05:25-05:00
 toc: true
 ---
 
-# RxJava2 to Coroutines Migration Guide
-
 
 ```kotlin
 val coroutinesVersion = "1.5.0"
@@ -28,7 +26,7 @@ dependencies {
 ### How code will look like finally in ViewModel
 
 
-![flow in viewmodel](flow_in_viewmodel.png "Nice VAldai")
+![flow in viewmodel](/assets/images/flow_in_viewmodel.png "Nice VAldai")
 
 
 ### Useful links regarding MVI
